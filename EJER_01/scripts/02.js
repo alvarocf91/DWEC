@@ -1,6 +1,20 @@
+let coche = {
+    marca:"Seat",
+    modelo:"Ibiza",
+    año:2025,
+    estaDisponible: true
+};
 
-const cliente = "Juan"
-cliente = 30
+console.table(coche)
 
-const precio = 1000
-console.log(precio)
+const{marca,modelo}=coche;
+console.log("Marca:",marca);
+console.log("Modelo:",modelo);
+
+coche.estaDisponible = false;
+
+coche.color = "verde";
+
+delete coche.año;
+
+console.table(coche);
