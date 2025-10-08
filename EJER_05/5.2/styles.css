@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+ul.faq {
+  list-style: none;
+  padding: 0;
+}
+
+ul.faq li {
+  margin-bottom: 15px;
+}
+
+h2 {
+  cursor: pointer;
+  color: #0056b3;
+}
+
+h2:hover {
+  text-decoration: underline;
+}
+
+p.oculto {
+  display: none;
+}
+
+p {
+  margin-left: 15px;
+  color: #333;
+}

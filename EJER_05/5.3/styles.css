@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#informe-errores {
+  margin-top: 20px;
+}
+
+#informe-errores p {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.error {
+  background-color: #ffe5e5;
+  color: #d00000;
+}
+
+.valido {
+  background-color: #e5ffe5;
+  color: #007f00;
+}

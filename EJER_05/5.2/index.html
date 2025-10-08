@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ Acordeón Manual</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Preguntas Frecuentes (FAQ)</h1>
+
+  <ul class="faq">
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es JavaScript?</h2>
+      <p class="oculto">Es un lenguaje de programación que permite crear interactividad en sitios web.</p>
+    </li>
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es el DOM?</h2>
+      <p class="oculto">Es la estructura de objetos que el navegador crea a partir del HTML.</p>
+    </li>
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué hace una función?</h2>
+      <p class="oculto">Encapsula un conjunto de instrucciones que pueden ser ejecutadas cuando se llama a la función.</p>
+    </li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
