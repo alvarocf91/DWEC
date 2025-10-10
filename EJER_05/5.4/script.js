@@ -1,45 +1,48 @@
 const usuarios = [
-  { nombre: 'Ana', edad: 25 },
-  { nombre: 'Luis', edad: 30 },
-  { nombre: 'María', edad: 28 },
-  { nombre: 'Pedro', edad: 35 }
+    {nombre: 'Ana', edad: 25},
+    {nombre: 'Luis', edad: 30},
+    {nombre: 'Carlos', edad: 22},
+    {nombre: 'Sofía', edad: 28}
 ];
 
+function crearTabla(datos) {
 
-function construirTabla(arrayDeUsuarios) {
+    const tabla = document.createElement('table');
 
-  const tabla = document.createElement('table');
-  const fragmento = document.createDocumentFragment();
+    const cabecera = document.createElement('thead');
+    const filaCabecera = document.createElement('tr');
+    const thNombre = document.createElement('th');
+    const thEdad = document.createElement('th');
+    
+    thNombre.textContent = 'Nombre';
+    thEdad.textContent = 'Edad';
+    
+    filaCabecera.appendChild(thNombre);
+    filaCabecera.appendChild(thEdad);
+    cabecera.appendChild(filaCabecera);
+    tabla.appendChild(cabecera);
 
+    const cuerpo = document.createElement('tbody');
 
-  const encabezado = document.createElement('tr');
-  const claves = Object.keys(arrayDeUsuarios[0]);  
-  
-  claves.forEach(clave => {
-    const th = document.createElement('th');
-    th.textContent = clave.charAt(0).toUpperCase() + clave.slice(1);
-    encabezado.appendChild(th);
-  });
-
-  tabla.appendChild(encabezado);
-
-  arrayDeUsuarios.forEach(usuario => {
-    const fila = document.createElement('tr');
-
-    claves.forEach(clave => {
-      const td = document.createElement('td');
-      td.textContent = usuario[clave];
-      fila.appendChild(td);
+    datos.forEach(usuario => {
+        const fila = document.createElement('tr');
+        
+        const celdaNombre = document.createElement('td');
+        const celdaEdad = document.createElement('td');
+        
+        celdaNombre.textContent = usuario.nombre;
+        celdaEdad.textContent = usuario.edad;
+        
+        fila.appendChild(celdaNombre);
+        fila.appendChild(celdaEdad);
+        
+        cuerpo.appendChild(fila);
     });
-
-    fragmento.appendChild(fila);
-  });
-
-
-  tabla.appendChild(fragmento);
-
-  const contenedor = document.getElementById('contenedor-tabla');
-  contenedor.appendChild(tabla);
+    
+    tabla.appendChild(cuerpo);
+    
+    document.getElementById('contenedor-tabla').appendChild(tabla);
 }
 
-construirTabla(usuarios);
+
+crearTabla(usuarios);

@@ -1,0 +1,13 @@
+button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#carrito {
+  list-style-type: none;
+  padding: 0;
+}
+
+#carrito li {
+  margin: 5px 0;
+}

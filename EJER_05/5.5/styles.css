@@ -1,0 +1,12 @@
+#lista-tareas {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-tareas li {
+    margin: 5px 0;
+}
+
+button {
+    margin-left: 10px;
+}

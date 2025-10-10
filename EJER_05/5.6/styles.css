@@ -1,0 +1,12 @@
+.tab-content {
+  display: none;
+}
+
+.tab-content:not(.oculto) {
+  display: block;
+}
+
+button {
+  margin: 5px;
+  cursor: pointer;
+}

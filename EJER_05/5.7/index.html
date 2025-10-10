@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compra</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <ul id="productos">
+    <li data-price="10">Producto 1 - $10 <button onclick="añadirAlCarrito(this)">Añadir al carrito</button></li>
+    <li data-price="15">Producto 2 - $15 <button onclick="añadirAlCarrito(this)">Añadir al carrito</button></li>
+    <li data-price="20">Producto 3 - $20 <button onclick="añadirAlCarrito(this)">Añadir al carrito</button></li>
+  </ul>
+
+  <h3>Carrito</h3>
+  <ul id="carrito"></ul>
+  <span id="total">Total: $0</span>
+
+  <script src="script.js"></script>
+</body>
+</html>
