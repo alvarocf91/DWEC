@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(40, 15px);
+  grid-template-rows: repeat(40, 15px);
+  gap: 1px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.grid-cell {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  user-select: none; 
+}

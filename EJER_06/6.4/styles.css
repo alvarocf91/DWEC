@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  transition: background-color 0.3s ease;
+}
+
+#color-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.color {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.color[data-color="red"] { background-color: red; }
+.color[data-color="blue"] { background-color: blue; }
+.color[data-color="green"] { background-color: green; }
+.color[data-color="yellow"] { background-color: yellow; }
+.color[data-color="purple"] { background-color: purple; }

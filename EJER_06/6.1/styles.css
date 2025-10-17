@@ -1,0 +1,64 @@
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* El modal está oculto por defecto */
+    position: fixed;
+    z-index: 1; /* Se asegura de que el modal esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+/* El contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Puedes ajustar el tamaño del modal */
+    max-width: 500px;
+}
+
+/* Estilo para el botón de cerrar */
+.close-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto 20px auto; /* Para centrarlo */
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Botón para mostrar el modal */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Nuestra Tienda</h1>
+  </header>
+
+  <main class="container">
+    <section class="card productos" id="lista-productos">
+      <h2>Productos disponibles</h2>
+
+      <article class="producto">
+        <h3 class="nombre">Portátil Pro</h3>
+        <p class="precio">Precio: <span class="valor-precio">1200 €</span></p>
+        <button class="btn btn-add">Añadir al carrito</button>
+      </article>
+
+      <article class="producto">
+        <h3 class="nombre">Ratón Inalámbrico</h3>
+        <p class="precio">Precio: <span class="valor-precio">25 €</span></p>
+        <button class="btn btn-add">Añadir al carrito</button>
+      </article>
+
+      <article class="producto">
+        <h3 class="nombre">Teclado Mecánico</h3>
+        <p class="precio">Precio: <span class="valor-precio">90 €</span></p>
+        <button class="btn btn-add">Añadir al carrito</button>
+      </article>
+    </section>
+
+    <aside class="card carrito">
+      <h2>Carrito</h2>
+      <ul id="carrito-lista"></ul>
+      <p id="carrito-vacio" class="empty">Tu carrito está vacío.</p>
+      <div class="total">
+        <span>Total:</span>
+        <span id="total-precio">0,00 €</span>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
