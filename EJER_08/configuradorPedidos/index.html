@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Configurador de Pizza</title>
+</head>
+<body>
+
+  <h2>Configurador de Pedidos de Pizza</h2>
+
+  <form id="pizza-form">
+
+    <fieldset>
+      <legend>Tamaño</legend>
+      <label><input type="radio" name="tamaño" value="10" checked> Pequeña (10€)</label><br>
+      <label><input type="radio" name="tamaño" value="12"> Mediana (12€)</label><br>
+      <label><input type="radio" name="tamaño" value="15"> Grande (15€)</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Ingredientes extra</legend>
+      <label><input type="checkbox" name="ingredientes" value="1"> Extra de queso (+1€)</label><br>
+      <label><input type="checkbox" name="ingredientes" value="1.5"> Pepperoni (+1.5€)</label><br>
+      <label><input type="checkbox" name="ingredientes" value="0.75"> Champiñones (+0.75€)</label><br>
+      <label><input type="checkbox" name="ingredientes" value="1"> Piña (+1€)</label>
+    </fieldset>
+
+    <label for="masa">Tipo de masa:</label>
+    <select id="masa" name="masa">
+      <option value="0">Fina (sin coste)</option>
+      <option value="1">Normal (+1€)</option>
+      <option value="2.5">Rellena de queso (+2.5€)</option>
+    </select>
+
+    <p><strong>Precio Total: <span id="precio-total">10.00</span> €</strong></p>
+
+    <button type="button" id="realizar-pedido">Realizar Pedido</button>
+
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

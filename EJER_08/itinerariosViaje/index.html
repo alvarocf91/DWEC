@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificador de Itinerarios de Viaje</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f9f9f9; }
+    h2 { font-size: 1.3rem; margin-bottom: .75rem; }
+    .card-actividad { border-radius: .75rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .error-text { color: #d9534f; margin-top: 10px; }
+    .campo-error { border-color: #d9534f !important; }
+    @media (max-width: 768px) {
+      .columna { margin-bottom: 2rem; }
+    }
+  </style>
+</head>
+<body class="p-3">
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-3 columna">
+        <div class="card p-3">
+          <h2>Filtros</h2>
+          <div class="mb-3">
+            <label for="selectDestino" class="form-label">Destino</label>
+            <select id="selectDestino" class="form-select"></select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tipo de actividad</label>
+            <div id="contenedorTipos"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="precioFiltro" class="form-label">Precio máximo: 
+              <span id="valorPrecioFiltro"></span> €</label>
+            <input type="range" id="precioFiltro" class="form-range" min="0" max="1000" value="1000">
+          </div>
+
+          <button id="btnReset" class="btn btn-secondary w-100">Reiniciar filtros</button>
+        </div>
+      </div>
+
+      <div class="col-md-5 columna">
+        <div class="card p-3">
+          <h2>Actividades disponibles</h2>
+          <div id="listaActividades" class="row"></div>
+          <p id="mensajeSinResultados" class="text-center text-muted d-none mt-2">
+            No se encontraron actividades con esos filtros.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 columna">
+        <div class="card p-3 mb-3">
+          <h2>Tu Itinerario</h2>
+          <ul id="listaItinerario" class="list-group mb-3"></ul>
+          <div class="p-2 bg-light rounded">
+            <p class="mb-1"><strong>Nº Actividades:</strong> <span id="numActividades">0</span></p>
+            <p class="mb-1"><strong>Duración Total:</strong> <span id="duracionTotal">0</span> h</p>
+            <p class="mb-0"><strong>Coste Total:</strong> <span id="costeTotal">0</span> €</p>
+          </div>
+        </div>
+
+        <div class="card p-3">
+          <h2>Formulario de Reserva</h2>
+          <form id="formReserva" novalidate>
+            <div class="mb-2">
+              <label for="nombreCliente" class="form-label">Nombre completo</label>
+              <input type="text" id="nombreCliente" class="form-control">
+            </div>
+            <div class="mb-2">
+              <label for="emailCliente" class="form-label">Email</label>
+              <input type="email" id="emailCliente" class="form-control">
+            </div>
+            <div class="mb-2">
+              <label for="fechaInicio" class="form-label">Fecha de inicio</label>
+              <input type="date" id="fechaInicio" class="form-control">
+            </div>
+            <div class="mb-2">
+              <label for="codigoDescuento" class="form-label">Código de descuento</label>
+              <input type="text" id="codigoDescuento" class="form-control" placeholder="Opcional (ABCD25)">
+            </div>
+            <div class="form-check mb-2">
+              <input type="checkbox" id="seguroViaje" class="form-check-input">
+              <label class="form-check-label" for="seguroViaje">Seguro de viaje (obligatorio si supera 1000€)</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-2">Confirmar Reserva</button>
+          </form>
+          <div id="erroresValidacion" class="mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./datos/actividades.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
