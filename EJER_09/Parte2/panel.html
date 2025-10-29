@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EJER_09 - Ejercicio 2: Panel de Diagnóstico del Navegador</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 2em;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 500px;
+      margin: 2em auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    li {
+      padding: 1em;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    span {
+      font-weight: bold;
+      color: #0078d7;
+    }
+
+    .estado-conexion {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .indicador {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: grey;
+      border: 1px solid #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Panel de Diagnóstico del Navegador</h1>
+
+  <ul>
+    <li>Tamaño de la ventana (Viewport): <span id="viewport"></span></li>
+    <li>Tamaño total de la ventana: <span id="ventana"></span></li>
+    <li>Posición de la ventana: <span id="posicion"></span></li>
+    <li>Resolución de pantalla: <span id="resolucion"></span></li>
+    <li>Espacio disponible en pantalla: <span id="espacio"></span></li>
+    <li class="estado-conexion">
+      Estado de conexión:
+      <div class="indicador" id="indicador"></div>
+      <span id="conexion"></span>
+    </li>
+  </ul>
+
+  <script src="panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4 - Pop-ups</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 4: Pop-ups</h1>
+  <button id="abrir-popup">Abrir Pop-up Manualmente</button>
+  <button id="cerrar-popup">Cerrar Pop-up</button>
+
+  <script>
+    let popupWindow;
+
+    function abrirPopup() {
+      const ancho = 400;
+      const alto = 300;
+      const left = (window.innerWidth - ancho) / 2;
+      const top = 50;
+
+
+      if (popupWindow && !popupWindow.closed) {
+        popupWindow.focus();
+        return;
+      }
+
+      popupWindow = window.open(
+        'popup.html',
+        'popup',
+        `width=${ancho},height=${alto},left=${left},top=${top}`
+      );
+    }
+
+    setTimeout(abrirPopup, 5000);
+
+    document.getElementById('abrir-popup').addEventListener('click', abrirPopup);
+
+    document.getElementById('cerrar-popup').addEventListener('click', () => {
+      if (popupWindow && !popupWindow.closed) {
+        popupWindow.close();
+      }
+    });
+  </script>
+</body>
+</html>

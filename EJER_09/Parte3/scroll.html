@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EJER_09 - Ejercicio 3: Barra de Scroll</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    #barra-progreso {
+      height: 5px;
+      background: #0078d7;
+      width: 0%;
+      transition: width 0.2s;
+    }
+
+    main {
+      margin-top: 10px;
+      padding: 2em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    #volver-arriba {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #0078d7;
+      color: white;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    #volver-arriba.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="barra-progreso"></div>
+  </header>
+
+  <main>
+    <h1>Página con Scroll</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Phasellus scelerisque justo in metus ultricies, in faucibus leo gravida...</p>
+    <p>Curabitur feugiat felis sit amet ligula commodo, in dapibus lorem gravida...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Phasellus scelerisque justo in metus ultricies, in faucibus leo gravida...</p>
+    <p>Curabitur feugiat felis sit amet ligula commodo, in dapibus lorem gravida...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p>Phasellus scelerisque justo in metus ultricies, in faucibus leo gravida...</p>
+    <p>Curabitur feugiat felis sit amet ligula commodo, in dapibus lorem gravida...</p>
+  </main>
+
+  <button id="volver-arriba">↑ Volver Arriba</button>
+
+  <script src="scroll.js"></script>
+</body>
+</html>
