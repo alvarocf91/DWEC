@@ -1,0 +1,9 @@
+<documento>
+  <id>3</id>
+  <titulo>Declaración Universal de los Derechos Humanos</titulo>
+  <fecha>1948</fecha>
+  <imagen>https://upload.wikimedia.org/wikipedia/commons/d/dd/The_universal_declaration_of_human_rights_10_December_1948.jpg</imagen>
+  <descripcion>Documento histórico adoptado por la Asamblea General de la ONU.</descripcion>
+  <siguiente>null</siguiente>
+  <anterior>documento_2.xml</anterior>
+</documento>

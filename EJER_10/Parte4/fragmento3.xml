@@ -1,0 +1,7 @@
+<manuscrito>
+    <texto>El tercer secreto se esconde en la primera lista, la palabra inicial te guiará.</texto>
+    <pista>Mira el primer elemento de la lista.</pista>
+    <selector_solucion>ul li:first-child</selector_solucion>
+    <letra_clave>B</letra_clave>
+    <siguiente_fragmento>null</siguiente_fragmento>
+</manuscrito>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio de Aleaciones y Búnker</title>
+</head>
+<body>
+
+<h1>Sintetizador de Materiales</h1>
+
+<div id="sintetizador">
+    <label for="base">Material Base:</label>
+    <select id="base"></select>
+
+    <label for="mezcla">Material de Mezcla:</label>
+    <select id="mezcla"></select>
+
+    <button id="sintetizar">Sintetizar</button>
+
+    <div id="resultado"></div>
+    <h3>Historial de Síntesis</h3>
+    <ul id="historial"></ul>
+</div>
+
+<hr>
+
+<h1>Validador de Acceso a Búnker</h1>
+
+<form id="acceso">
+    <label for="codigo">Código de Agente:</label>
+    <input type="text" id="codigo">
+    <span id="nombreAgente"></span>
+    <br><br>
+
+    <label for="clave">Clave de Acceso:</label>
+    <input type="password" id="clave" disabled>
+    <span id="estadoClave"></span>
+    <br><br>
+
+    <button id="acceder" disabled>Acceder</button>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

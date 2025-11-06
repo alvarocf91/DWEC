@@ -1,0 +1,9 @@
+<documento>
+    <id>1</id>
+    <titulo>Declaración de Independencia</titulo>
+    <fecha>1776</fecha>
+    <imagen>https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Declaration_of_Independence_%281819%29%2C_by_John_Trumbull.jpg/960px-Declaration_of_Independence_%281819%29%2C_by_John_Trumbull.jpg?20210705064337</imagen>
+    <descripcion>Texto fundamental de la historia de EE.UU.</descripcion>
+    <siguiente>documento_2.xml</siguiente>
+    <anterior>null</anterior>
+</documento>

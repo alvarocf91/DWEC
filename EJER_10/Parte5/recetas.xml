@@ -1,0 +1,20 @@
+<recetas>
+    <aleacion>
+        <base>Hierro</base>
+        <mezcla>Carbono</mezcla>
+        <resultado>Acero</resultado>
+        <descripcion>Una aleación fuerte y versátil, usada durante siglos.</descripcion>
+    </aleacion>
+    <aleacion>
+        <base>Cobre</base>
+        <mezcla>Estaño</mezcla>
+        <resultado>Bronce</resultado>
+        <descripcion>Más duro que el cobre, revolucionó la Edad de los Metales.</descripcion>
+    </aleacion>
+    <aleacion>
+        <base>Plomo</base>
+        <mezcla>Estaño</mezcla>
+        <resultado>Soldadura</resultado>
+        <descripcion>Usada para unir metales en fontanería y electrónica.</descripcion>
+    </aleacion>
+</recetas>

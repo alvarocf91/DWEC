@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Visor de Documentos Históricos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+#visitados li { cursor:pointer; text-decoration:underline; color:blue; }
+</style>
+</head>
+<body class="bg-light p-4">
+<div class="container">
+    <h1>Visor de Documentos Históricos</h1>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 id="titulo"></h3>
+            <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+            <img id="imagen" src="" class="img-fluid mb-3" alt="Documento">
+            <p id="descripcion"></p>
+            <div>
+                <button id="anteriorBtn" class="btn btn-primary">Anterior</button>
+                <button id="siguienteBtn" class="btn btn-primary">Siguiente</button>
+                <button id="volverUltimoBtn" class="btn btn-secondary">Volver al último</button>
+            </div>
+        </div>
+    </div>
+    <h4>Documentos Visitados</h4>
+    <ul id="visitados"></ul>
+</div>
+
+<script>
+const tituloEl = document.getElementById("titulo");
+const fechaEl = document.getElementById("fecha");
+const imagenEl = document.getElementById("imagen");
+const descripcionEl = document.getElementById("descripcion");
+const anteriorBtn = document.getElementById("anteriorBtn");
+const siguienteBtn = document.getElementById("siguienteBtn");
+const volverUltimoBtn = document.getElementById("volverUltimoBtn");
+const visitadosUl = document.getElementById("visitados");
+
+let historial = [];
+let documentoActual = "";
+
+function cargarDocumento(archivo){
+    fetch(archivo)
+    .then(r=>r.text())
+    .then(str => (new DOMParser()).parseFromString(str,"text/xml"))
+    .then(xml=>{
+        const doc = xml.querySelector('documento');
+        const titulo = doc.querySelector('titulo').textContent;
+        const fecha = doc.querySelector('fecha').textContent;
+        const imagen = doc.querySelector('imagen').textContent;
+        const descripcion = doc.querySelector('descripcion').textContent;
+        const siguiente = doc.querySelector('siguiente').textContent;
+        const anterior = doc.querySelector('anterior').textContent;
+
+        tituloEl.textContent = titulo;
+        fechaEl.textContent = fecha;
+        imagenEl.src = imagen;
+        descripcionEl.textContent = descripcion;
+
+        anteriorBtn.disabled = anterior === "null";
+        siguienteBtn.disabled = siguiente === "null";
+
+        documentoActual = archivo;
+
+        if(!historial.some(i=>i.archivo===archivo)){
+            historial.push({titulo,fecha,archivo});
+            const li = document.createElement('li');
+            li.textContent = `${titulo} (${fecha})`;
+            li.dataset.archivo = archivo;
+            li.addEventListener('click', ()=>cargarDocumento(li.dataset.archivo));
+            visitadosUl.appendChild(li);
+        }
+
+        anteriorBtn.onclick = ()=>{ if(anterior!=="null") cargarDocumento(anterior); };
+        siguienteBtn.onclick = ()=>{ if(siguiente!=="null") cargarDocumento(siguiente); };
+        volverUltimoBtn.onclick = ()=>{ cargarDocumento("documento_ultimo.xml"); };
+    })
+    .catch(err=>console.error("Error cargando XML:",err));
+}
+
+cargarDocumento("documento_ultimo.xml");
+</script>
+
+</body>
+</html>

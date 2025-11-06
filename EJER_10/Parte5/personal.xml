@@ -1,0 +1,14 @@
+<agentes>
+    <agente codigo="007">
+        <nombre>Mortadelo</nombre>
+        <clave>morcilla</clave>
+    </agente>
+    <agente codigo="009">
+        <nombre>Anacleto</nombre>
+        <clave>chorizo</clave>
+    </agente>
+    <agente codigo="001">
+        <nombre>James</nombre>
+        <clave>bond</clave>
+    </agente>
+</agentes>

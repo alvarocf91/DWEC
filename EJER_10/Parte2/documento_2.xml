@@ -1,0 +1,9 @@
+<documento>
+  <id>2</id>
+  <titulo>Constitución de 1812</titulo>
+  <fecha>1812</fecha>
+  <imagen>https://www.cervantesvirtual.com/images/portales/constitucion_1812/documentos/constitucion_portada_s.jpg</imagen>
+  <descripcion>Primera constitución liberal de España, conocida como "La Pepa".</descripcion>
+  <siguiente>documento_ultimo.xml</siguiente>
+  <anterior>documento_1.xml</anterior>
+</documento>
