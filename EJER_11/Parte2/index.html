@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sistema de comentarios (simulado)</title>
+</head>
+<body>
+  <div id="comments-section">
+    <h1>Comentarios</h1>
+
+    <form id="comment-form">
+      <label>Autor:</label><br>
+      <input type="text" id="author" required><br><br>
+
+      <label>Comentario:</label><br>
+      <textarea id="commentText" required></textarea><br><br>
+
+      <button type="submit">Enviar comentario</button>
+    </form>
+
+    <h3>Lista de comentarios:</h3>
+    <ul id="comments-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Productos</title>
+</head>
+<body>
+  <div id="catalog-container">
+    <h1>Catálogo de Productos</h1>
+
+    <div id="controls">
+      <label for="categoryFilter">Categoría:</label>
+      <select id="categoryFilter">
+        <option value="all">Todas</option>
+      </select>
+
+      <label for="brandFilter">Marca:</label>
+      <select id="brandFilter">
+        <option value="all">Todas</option>
+      </select>
+
+      <label for="sortPrice">Ordenar por precio:</label>
+      <select id="sortPrice">
+        <option value="none">Sin orden</option>
+        <option value="asc">Ascendente</option>
+        <option value="desc">Descendente</option>
+      </select>
+    </div>
+
+    <div id="product-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
