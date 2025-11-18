@@ -1,0 +1,42 @@
+[
+  {
+    "id": 101,
+    "nombre": "Teclado Mecánico RGB",
+    "sku": "TEC-RGB-001",
+    "precio": 89.99,
+    "stock": 45,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 102,
+    "nombre": "Monitor Curvo 27 pulgadas",
+    "sku": "MON-CUR-027",
+    "precio": 299.50,
+    "stock": 25,
+    "categoria": "Monitores"
+  },
+  {
+    "id": 103,
+    "nombre": "Ratón Inalámbrico Ergonómico",
+    "sku": "RAT-ERG-003",
+    "precio": 45.00,
+    "stock": 80,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 106,
+    "nombre": "Micrófono USB Studio",
+    "sku": "MIC-USB-500",
+    "precio": 129.90,
+    "stock": 20,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 107,
+    "nombre": "Alfombrilla XL Gaming",
+    "sku": "ALF-GAM-XL",
+    "precio": 19.90,
+    "stock": 100,
+    "categoria": "Periféricos"
+  }
+]
