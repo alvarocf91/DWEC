@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vencidos</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<h1>Libros vencidos</h1>
+
+<table>
+<tr>
+    <th>Título</th>
+    <th>Autor</th>
+    <th>Usuario</th>
+    <th>Fecha devolución</th>
+</tr>
+
+<% libros.forEach(l => { %>
+<tr>
+    <td><%= l.titulo %></td>
+    <td><%= l.autor %></td>
+    <td><%= l.nombre_prestatario %></td>
+    <td><%= l.fecha_devolucion %></td>
+</tr>
+<% }) %>
+
+</table>
+
+</body>
+</html>
