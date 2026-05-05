@@ -38,5 +38,14 @@
     "precio": 65.75,
     "stock": 60,
     "categoria": "Periféricos"
-  }
+  },
+  {
+  "id": 106,
+  "nombre": "Micrófono USB Studio",
+  "sku": "MIC-USB-500",
+  "precio": 129.90,
+  "stock": 20,
+  "categoria": "Periféricos"
+}
+
 ]

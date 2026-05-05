@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; padding: 20px; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #1a1a1a; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; }
+        .del-btn { background: #dc3545; padding: 5px 10px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Home | All Portfolios | <strong>My Dashboard</strong> | <a href="/logout">Logout</a> (Logged in as <%= user.username %>)</p>
+        <h1>Dashboard for <%= user.username %></h1>
+    </header>
+
+    <div class="card">
+        <h2>Edit Your Profile</h2>
+        <form action="/update-profile" method="POST">
+            Email: <input type="email" name="email" value="<%= user.email %>">
+            Bio: <textarea name="bio" rows="3"><%= user.bio %></textarea>
+            Photo URL: <input type="text" name="photo" value="<%= user.photo %>">
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Manage Social Links</h2>
+        <ul>
+            <% links.forEach(link => { %>
+                <li style="margin-bottom: 10px;">
+                    <%= link.platform %>: <%= link.url %>
+                    <form action="/delete-link" method="POST" style="display:inline;">
+                        <input type="hidden" name="id" value="<%= link.id %>">
+                        <button type="submit" class="del-btn">Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+        <h3>Add New Social Link</h3>
+        <form action="/add-link" method="POST">
+            <input type="text" name="platform" placeholder="Platform (GitHub, Twitter...)" required>
+            <input type="url" name="url" placeholder="URL del perfil" required>
+            <button type="submit">Add Link</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Manage Projects</h2>
+        <% projects.forEach(p => { %>
+            <div style="border-bottom: 1px solid #eee; padding: 10px 0; display: flex; justify-content: space-between; align-items: center;">
+                <div><strong><%= p.title %></strong></div>
+                <form action="/delete-project" method="POST">
+                    <input type="hidden" name="id" value="<%= p.id %>">
+                    <button type="submit" class="del-btn">Delete Project</button>
+                </form>
+            </div>
+        <% }) %>
+        <h3>Add New Project</h3>
+        <form action="/add-project" method="POST">
+            <input type="text" name="title" placeholder="Project Title" required>
+            <textarea name="description" placeholder="Description"></textarea>
+            <input type="url" name="repo_url" placeholder="Repo URL">
+            <input type="url" name="live_url" placeholder="Live Demo URL">
+            <button type="submit">Add Project</button>
+        </form>
+    </div>
+</body>
+</html>

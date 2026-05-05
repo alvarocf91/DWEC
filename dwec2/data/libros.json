@@ -1,0 +1,26 @@
+[
+  {
+    "id": "L1",
+    "titulo": "El Quijote",
+    "autor": "Miguel de Cervantes",
+    "ejemplaresDisponibles": 3
+  },
+  {
+    "id": "L2",
+    "titulo": "Cien años de soledad",
+    "autor": "Gabriel García Márquez",
+    "ejemplaresDisponibles": 1
+  },
+  {
+    "id": "L3",
+    "titulo": "1984",
+    "autor": "George Orwell",
+    "ejemplaresDisponibles": 0
+  },
+  {
+    "id": "L4",
+    "titulo": "La sombra del viento",
+    "autor": "Carlos Ruiz Zafón",
+    "ejemplaresDisponibles": 2
+  }
+]
